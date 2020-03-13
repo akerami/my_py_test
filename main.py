@@ -1,4 +1,10 @@
-import os, sys, pprint
+import os, sys
+from pprint import pprint
+
+sys.path.append('/app/mypy')
+
+import mypy
+
 from mypy import api
 
 if __name__ == "__main__":

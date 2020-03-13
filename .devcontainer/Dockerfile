@@ -57,8 +57,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Switch back to dialog for any ad-hoc use of apt get 
+ADD ./mypy/mypy /workspaces/my_py_test/mypy/
 ENV DEBIAN_FRONTEND=dialog
 ENV PYTHONPATH "${PYTHONPATH}:/workspaces/my_py_test/mypy/"
-
-
-

@@ -5,12 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Module",
+            "name": "Docker-compose-windows",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}/",
+                        "remoteRoot": "/app"
+                    }
+                ],
+                "projectType": "general"
+            }
+        },
+        {
+            "name": "Python: Mac",
             "type": "python",
             "request": "launch",
             "module": "main",
             "console": "internalConsole",
             "cwd": "${workspaceFolder}/"
-        }
+        },
     ]
 }

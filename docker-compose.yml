@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  mypytest:
+    image: mypytest
+    build:
+      context: .
+      dockerfile: Dockerfile
