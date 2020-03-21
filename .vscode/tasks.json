@@ -1,0 +1,24 @@
+{
+    "tasks": [
+        {
+            "type": "docker-build",
+            "label": "docker-build",
+            "platform": "python",
+            "dockerBuild": {
+                "tag": "mypytest:latest",
+                "dockerfile": "${workspaceFolder}/.devcontainer-win/Dockerfile",
+                "context": "${workspaceFolder}"
+            }
+        },
+        {
+            "type": "docker-run",
+            "label": "docker-run: debug",
+            "dependsOn": [
+                "docker-build"
+            ],
+            "python": {
+                "file": "main.py"
+            }
+        }
+    ]
+}
